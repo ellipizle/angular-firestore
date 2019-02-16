@@ -1,0 +1,21 @@
+
+
+<div class="row">
+    <div class="col-12">
+            <mat-card  *ngIf="selectedUser">
+                     <mat-card-header>
+                    <img mat-card-avatar src="selectedUser.profileImg">
+                    <mat-card-title>{{selectedUser.username}}</mat-card-title>
+                    <mat-card-subtitle>{{selectedUser.profileDescription}}</mat-card-subtitle>
+                    </mat-card-header>
+            </mat-card>
+    </div>
+        <mat-divider [vertical]="true"></mat-divider>
+
+    <div class="col-12">
+        <mat-spinner *ngIf="pending"></mat-spinner>
+        <mat-card  echarts [options]="line" class="demo-chart">
+        </mat-card>
+            <!-- <div ></div> -->
+    </div>
+</div>
